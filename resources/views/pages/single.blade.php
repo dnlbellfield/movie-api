@@ -11,7 +11,7 @@
     </p>
     <h2 class="mb-20 font-heading font-semibold text-center text-6xl sm:text-7xl text-white">Star Wars
     </h2>
-    <div class="flex flex-wrap -m-3"></div> 
+    <div class="flex flex-wrap -m-3">
     <!-- show poster  -->
     <div class="w-full md:w-/4 xl:w-1/4 p-3">
         <div class="flex flex-col justify-end h-full relative bg-gradient-cyan overflow-hidden rounded-10">
@@ -26,8 +26,10 @@
       <span> {{$genre}}</span>
       @endforeach
     </div>
+    
 
 
   </div>
+</div> 
 </section>
 @endsection
