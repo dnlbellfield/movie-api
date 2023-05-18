@@ -64,7 +64,8 @@ Route::get('/{type}/{id}', function (Request $request, $type, $id) {
         $free_sources[] = $item;
       }
   }
-  // return $rent_sources;
+
+  // return $results['genre_names'];
   return view('pages.single', [
     "data" => $results,
     "rent_sources" => $rent_sources,
