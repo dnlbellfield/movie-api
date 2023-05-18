@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +17,8 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Route::get('/search', function () {
+Route::get('/search', function (Request $request) {
+  return $request->input('query');
   return view('pages.results');
 });
 
