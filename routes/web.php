@@ -38,7 +38,7 @@ Route::get('/search', function (Request $request) {
 Route::get('/{type}/{id}', function (Request $request, $type, $id) {
   // return $request->input('query');
   // $query = $request->input('query');
-  $request_url = "https://api.watchmode.com/v1/title/345534/details/?apiKey=" . env('WATCHMODE_KEY') . "&append_to_response=sources";
+  $request_url = "https://api.watchmode.com/v1/title/" . $id ."/details/?apiKey=" . env('WATCHMODE_KEY') . "&append_to_response=sources";
   
 
   $response = Http::get($request_url);

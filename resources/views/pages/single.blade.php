@@ -3,13 +3,14 @@
 @section('title','Results')
 
 @section('content')
+
 <section class="relative pt-28 pb-36 bg-black overflow-hidden">
   <div class="container mx-auto px-4">
 
     <div class="flex flex-wrap -m-3">
     <!-- show poster  -->
     <div class="w-full md:w-/4 xl:w-1/4 p-3">
-        <div class="flex flex-col justify-end h-full relative bg-gradient-cyan overflow-hidden rounded-10">
+        <div class="flex flex-col justify-center h-full relative  overflow-hidden rounded-10">
           <img class="mx-auto w-full" src="{{$data['poster']}}" alt="">
         </div>
     </div>
@@ -54,7 +55,17 @@
             @endforeach
           </ul>
         </div>
+        <div class="md:w-3/12">
+          <h3 class="text-2xl text-white font-bold">Free</h3>
+          <ul>
+            @foreach ($free_sources as $item )
+            <li><a href="{{$item['web_url']}}">{{$item['name']}} {{$item['price']}} </a></li>
+              
+            @endforeach
+          </ul>
+        </div>
       </div>
+      
     </section>
     
     
